@@ -1,0 +1,390 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<title>Course Project</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=1274, user-scalable=no">
+	<meta name="description" content="Course Project">
+	<meta name="author" content="Thomas H.">
+	<meta name="generator" content="slidify" />
+	<!-- LOAD STYLE SHEETS -->
+	<link rel="stylesheet" href="libraries/frameworks/shower/themes/ribbon/styles/screen.css">
+	<link rel="stylesheet" media="print"
+	  href="libraries/frameworks/shower/themes/ribbon/styles/print.css">
+	<link rel="stylesheet" href="libraries/highlighters/highlight/css/tomorrow.css">  <link rel="stylesheet" href = "assets/css/ribbons.css">
+
+	<!--
+		To apply styles to the certain slides
+		use slide ID to get needed elements
+		-->
+	<style>
+		#Cover h2 {
+      margin:65px 0 0;
+			color:#FFF;
+			text-align:center;
+			font-size:70px;
+			}
+		#FitToWidth h2,
+		#FitToHeight h2 {
+			color:#FFF;
+			text-align:center;
+			}
+	</style> 
+</head>
+<body class="list">
+  <header class="caption">
+  	<h1>Course Project</h1>
+	</header>
+  <section class="slide " id="slide-1">
+  <div>
+    <h2>Course Project</h2>
+    <h2>Developing Data Products</h2>
+
+<h3>Slidify Presentation</h3>
+
+  </div>
+</section>
+<section class="slide class" id="id">
+  <div>
+    <h2>Application</h2>
+    <p>For the Course Project of the Course <code>Developing Data Products</code> I created a tiny app to calculate shipping costs between a few european cities.   </p>
+
+<p>You can check the app here:<br>
+<a href="https://thhaef.shinyapps.io/Project">https://thhaef.shinyapps.io/Project</a></p>
+
+  </div>
+</section>
+<section class="slide " id="slide-3">
+  <div>
+    <h2>Mechanics</h2>
+    <p>The app uses the dataset <code>eurodist</code> to get the distances between selected cities in europe.<br>
+Based on these distances it estimates a price for the total shipping.<br>
+Options for different packages sizes/weights and fast shipping are included.</p>
+
+  </div>
+</section>
+<section class="slide " id="slide-4">
+  <div>
+    <h2>Opportunities</h2>
+    <p>It is an easy-to-use application and close to actual usage. (The way the prices are calculated has to be altered, obviously, but by actual shipping companies).<br>
+To compare the distances i will show a map of europe in the next slide, produced with some R code.   </p>
+
+  </div>
+</section>
+<section class="slide " id="slide-5">
+  <div>
+    <h2>Europe</h2>
+    <!-- GeoChart generated in R 3.1.2 by googleVis 0.5.10 package -->
+
+<!-- Fri Sep 25 18:36:52 2015 -->
+
+<!-- jsHeader -->
+
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataGeoChartID1afc58394e62 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "Alabama",
+2.1 
+],
+[
+ "Alaska",
+1.5 
+],
+[
+ "Arizona",
+1.8 
+],
+[
+ "Arkansas",
+1.9 
+],
+[
+ "California",
+1.1 
+],
+[
+ "Colorado",
+0.7 
+],
+[
+ "Connecticut",
+1.1 
+],
+[
+ "Delaware",
+0.9 
+],
+[
+ "Florida",
+1.3 
+],
+[
+ "Georgia",
+2 
+],
+[
+ "Hawaii",
+1.9 
+],
+[
+ "Idaho",
+0.6 
+],
+[
+ "Illinois",
+0.9 
+],
+[
+ "Indiana",
+0.7 
+],
+[
+ "Iowa",
+0.5 
+],
+[
+ "Kansas",
+0.6 
+],
+[
+ "Kentucky",
+1.6 
+],
+[
+ "Louisiana",
+2.8 
+],
+[
+ "Maine",
+0.7 
+],
+[
+ "Maryland",
+0.9 
+],
+[
+ "Massachusetts",
+1.1 
+],
+[
+ "Michigan",
+0.9 
+],
+[
+ "Minnesota",
+0.6 
+],
+[
+ "Mississippi",
+2.4 
+],
+[
+ "Missouri",
+0.8 
+],
+[
+ "Montana",
+0.6 
+],
+[
+ "Nebraska",
+0.6 
+],
+[
+ "Nevada",
+0.5 
+],
+[
+ "New Hampshire",
+0.7 
+],
+[
+ "New Jersey",
+1.1 
+],
+[
+ "New Mexico",
+2.2 
+],
+[
+ "New York",
+1.4 
+],
+[
+ "North Carolina",
+1.8 
+],
+[
+ "North Dakota",
+0.8 
+],
+[
+ "Ohio",
+0.8 
+],
+[
+ "Oklahoma",
+1.1 
+],
+[
+ "Oregon",
+0.6 
+],
+[
+ "Pennsylvania",
+1 
+],
+[
+ "Rhode Island",
+1.3 
+],
+[
+ "South Carolina",
+2.3 
+],
+[
+ "South Dakota",
+0.5 
+],
+[
+ "Tennessee",
+1.7 
+],
+[
+ "Texas",
+2.2 
+],
+[
+ "Utah",
+0.6 
+],
+[
+ "Vermont",
+0.6 
+],
+[
+ "Virginia",
+1.4 
+],
+[
+ "Washington",
+0.6 
+],
+[
+ "West Virginia",
+1.4 
+],
+[
+ "Wisconsin",
+0.7 
+],
+[
+ "Wyoming",
+0.6 
+] 
+];
+data.addColumn('string','state.name');
+data.addColumn('number','Illiteracy');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartGeoChartID1afc58394e62() {
+var data = gvisDataGeoChartID1afc58394e62();
+var options = {};
+options["width"] =    600;
+options["height"] =    400;
+options["region"] = "150";
+
+    var chart = new google.visualization.GeoChart(
+    document.getElementById('GeoChartID1afc58394e62')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "geochart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartGeoChartID1afc58394e62);
+})();
+function displayChartGeoChartID1afc58394e62() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+
+<!-- jsChart -->  
+
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartGeoChartID1afc58394e62"></script>
+ 
+
+<!-- divChart -->
+
+<div id="GeoChartID1afc58394e62" 
+  style="width: 600; height: 400;">
+</div>
+
+  </div>
+</section>
+  <div class="progress">
+    <div></div>
+  </div>
+	<script src="libraries/frameworks/shower/shower.js"></script>
+	<!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+	<script type="text/x-mathjax-config">
+	  MathJax.Hub.Config({
+	    tex2jax: {
+	      inlineMath: [['$','$'], ['\\(','\\)']],
+	      processEscapes: true
+	    }
+	  });
+	</script>
+	<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+	<!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script> -->
+	<script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+	<!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
+	<!-- Photos by John Carey — fiftyfootshadows.net -->
+</body>
+</html>

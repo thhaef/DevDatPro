@@ -1,0 +1,68 @@
+---
+title       : Course Project
+subtitle    : Slidify Presentation
+author      : Thomas H.
+job         : 
+framework   : shower     # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : [mathjax]            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+
+---  
+   
+   
+# Course Project   
+## Developing Data Products   
+### Slidify Presentation   
+
+
+
+--- .class #id
+  
+  
+## Application
+For the Course Project of the Course `Developing Data Products` I created a tiny app to calculate shipping costs between a few european cities.   
+
+You can check the app here:   
+https://thhaef.shinyapps.io/Project
+
+
+
+
+---
+
+
+## Mechanics
+
+The app uses the dataset `eurodist` to get the distances between selected cities in europe.   
+Based on these distances it estimates a price for the total shipping.    
+Options for different packages sizes/weights and fast shipping are included.
+
+---   
+  
+  
+## Opportunities
+It is an easy-to-use application and close to actual usage. (The way the prices are calculated has to be altered, obviously, but by actual shipping companies).   
+To compare the distances i will show a map of europe in the next slide, produced with some R code.   
+
+
+
+
+
+--- 
+  
+  
+  
+## Europe
+  
+```{r,dependson="gv",results="asis",warning=FALSE, echo=FALSE}
+require(datasets)
+states <- data.frame(state.name, state.x77)
+suppressPackageStartupMessages(library(googleVis))
+G2 <- gvisGeoChart(states, "state.name", "Illiteracy",
+                   options=list(region="150", width=600, height=400))
+print(G2,"chart")
+```
+
